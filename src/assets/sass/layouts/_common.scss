@@ -1,0 +1,96 @@
+.page-wrap {
+    display: flex;
+    height: 100vh;
+
+    .main {
+        width: calc(100% - rem(352));
+        background: $secondary-color2;
+        padding: rem(16) 0;
+
+        @include tablet-md() {
+            width: 100%;
+        }
+
+        &.profile-page{
+            padding: 0;
+        }
+
+    }
+
+    .side-nav {
+        width: rem(176);
+        height: 100vh;
+        background: $secondary-color1;
+    }
+
+    .right-nav {
+        padding: rem(16) 0 0;
+        transition: 0.3s all;
+
+        position: relative;
+        z-index: 99;
+
+        @include tablet-md() {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        &.aa{
+            display: block;
+         }
+
+        h4 {
+            padding: 0 rem(12);
+            margin-bottom: rem(16);
+            color: $secondary-color3;
+            text-transform: capitalize;
+        }
+
+       
+    }
+
+    .left-nav{
+        @include tablet-md() {
+            display: none;
+        }
+    }
+
+    .sml-block {
+        width: rem(176);
+
+        @include mobile-lg() {
+            width: auto;
+        }
+
+        &.utility-cntrls {
+            padding-right: rem(12);
+
+            @include mobile-lg() {
+                padding-right: 0;
+            }
+        }
+
+        &.song-thumbnail {
+            padding-left: rem(12);
+
+            @include mobile-lg() {
+                padding-left: 0;
+            }
+        }
+
+       
+    }
+
+    .lrg-block {
+        width: calc(100% - rem(352));
+
+        @include mobile-lg() {
+            width: 100%;
+            margin: rem(12) 0;
+        }
+    }
+
+
+}

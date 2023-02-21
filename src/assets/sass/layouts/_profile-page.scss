@@ -1,0 +1,211 @@
+.profile-page {
+    position: relative;
+
+    &::before {
+        content: '';
+        height: rem(300);
+        width: 100%;
+        background: #636363;
+        background: -moz-linear-gradient(top, #636363 0%, #191414 99%);
+        background: -webkit-linear-gradient(top, #636363 0%, #191414 99%);
+        background: linear-gradient(to bottom, #636363 0%, #191414 99%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#636363', endColorstr='#191414', GradientType=0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+
+    .main-header {
+        padding: rem(16) rem(24);
+        margin-bottom: 0;
+    }
+
+
+    .profile-cover {
+        display: flex;
+        align-items: center;
+        margin-bottom: rem(48);
+
+        @include tablet-lg() {
+            margin-bottom: rem(40);
+        }
+
+        @include mobile-lg() {
+            margin-bottom: rem(20);
+
+        }
+
+        .profile-image {
+            img {
+
+                @include tablet-lg() {
+                    width: rem(140);
+                    height: rem(140);
+                }
+
+                @include mobile-lg() {
+                    width: rem(100);
+                    height: rem(100);
+                }
+            }
+
+
+        }
+    }
+
+    .profile-text {
+        margin-left: rem(16);
+
+        p {
+            display: flex;
+            font-size: rem(12);
+            line-height: rem(14);
+            color: $secondary-color3;
+            margin: 0;
+
+        }
+
+        h1 {
+            margin: rem(16) 0;
+        }
+    }
+
+
+    .main-body {
+        height: calc(100vh - rem(56));
+        overflow-y: scroll;
+
+        padding: rem(48) rem(24) rem(100) rem(24);
+
+
+        @include mobile-lg() {
+            height: calc(100vh - rem(82));
+            padding-top: rem(24);
+            padding-bottom: rem(250);
+        }
+
+        .play-panel {
+            display: flex;
+            align-items: center;
+
+            .primary-btn {
+                margin-left: rem(24);
+            }
+        }
+
+        .body-part {
+            margin-top: rem(24);
+
+            h3 {
+                color: $secondary-color3;
+                text-transform: capitalize;
+            }
+
+            .two-col-row {
+                display: flex;
+
+                @include mobile-lg() {
+                    display: block;
+                }
+
+                .two-col {
+                    &.lrg {
+                        width: 55%;
+
+                        @include mobile-lg() {
+                            width: 100%;
+                            margin-bottom: rem(24);
+                        }
+
+                    }
+
+                    &.sml {
+                        width: 45%;
+                        padding-left: rem(48);
+
+                        @include mobile-lg() {
+                            width: 100%;
+                            padding-left: 0;
+                        }
+
+                    }
+                }
+            }
+
+            .popular-list {
+                padding-left: rem(24);
+
+                @include mobile-lg() {
+
+                    padding-left: 0;
+                }
+
+                .popular-item {
+                    margin-bottom: rem(12);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .thumbnail {
+                        display: flex;
+                        align-items: center;
+                        width: 60%;
+
+                        picture {
+                            margin: 0 rem(8) 0 rem(16);
+                        }
+
+                        a {
+                            font-family: $font-regular;
+                            font-size: rem(14);
+                            line-height: rem(16);
+                            color: $secondary-color3;
+                            text-transform: capitalize;
+
+                            &:hover {
+                                color: $primary-color;
+                            }
+                        }
+
+
+                    }
+
+                    span {
+                        font-size: rem(14);
+                        line-height: rem(16);
+                        color: $neutral-color1;
+                    }
+                }
+            }
+
+            .liked-songs {
+                display: flex;
+                align-items: center;
+
+                .text-wrap {
+                    margin-left: rem(8);
+                }
+
+                h3 {
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: rem(10);
+                    line-height: rem(12);
+                    color: $neutral-color1;
+                    text-transform: capitalize;
+                }
+            }
+
+        }
+    }
+
+
+}

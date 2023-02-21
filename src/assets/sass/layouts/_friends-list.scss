@@ -1,0 +1,56 @@
+.friends-list {
+    padding: rem(8) 0;
+    height: calc(100vh - rem(48));
+    overflow-y: scroll;
+
+    ul {
+        li {
+            display: block;
+            padding: 0 rem(8);
+            margin-bottom: rem(24);
+
+            a {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid transparent;
+
+
+                .frnd-text {
+                    margin-left: rem(8);
+                    width: 100%;
+
+                    .frnd-title {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: rem(4);
+
+                        h5 {
+                            color: $neutral-color1;
+                            text-transform: capitalize;
+                            margin-bottom: 0;
+                        }
+
+                        span {
+                            font-size: rem(10);
+                            line-height: rem(12);
+                            color: $neutral-color1;
+                        }
+                    }
+
+                    p {
+
+                        font-size: rem(10);
+                        line-height: rem(12);
+                        color: $neutral-color1;
+                        margin-bottom: rem(4);
+                        text-transform: capitalize;
+                    }
+                }
+
+                &:hover {
+                    border-bottom: 1px solid $primary-color;
+                }
+            }
+        }
+    }
+}

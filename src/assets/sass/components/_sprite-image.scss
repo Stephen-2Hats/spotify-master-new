@@ -1,0 +1,15 @@
+.serv-sprite {
+    position: relative;
+
+    span {
+        transition: 0.3s all;
+
+        &.hidden-icon {
+            position: absolute;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

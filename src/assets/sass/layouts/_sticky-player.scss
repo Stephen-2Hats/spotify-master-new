@@ -1,0 +1,180 @@
+.stickybar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.sticky-player {
+    background: $secondary-color2;
+    width: 100%;
+    padding: rem(16) 0;
+    border-top: 1px solid $neutral-color3;
+    display: flex;
+    align-items: center;
+
+    @include mobile-lg() {
+        flex-direction: column;
+        padding: rem(12);
+    }
+
+    .main-plyr-ctrls {
+        width: 100%;
+        max-width: rem(560);
+        margin: 0 auto;
+        text-align: center;
+
+        // @include mobile-lg() {
+        //     max-width: 100%;
+        // }
+
+        .ctrls-top {
+            margin-bottom: rem(12);
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                li {
+                    display: inline-block;
+                    margin: 0 rem(8);
+                    cursor: pointer;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    span {
+                        color: $neutral-color1;
+                        font-size: rem(12);
+                    }
+
+
+
+                    &.active,
+                    &:hover {
+                        span {
+                            color: $primary-color;
+                        }
+                    }
+
+                    &.playbtn {
+                        width: rem(28);
+                        height: rem(28);
+                        background: $secondary-color3;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        span {
+                            color: $secondary-color1;
+                            position: relative;
+                            left: 1px;
+                        }
+
+                      
+                    }
+
+
+                }
+            }
+        }
+
+        .ctrls-btm {
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: rem(10);
+                line-height: rem(12);
+                color: $neutral-color1;
+                margin: 0 rem(8);
+            }
+        }
+    }
+}
+
+// Player track
+.plyr-slider-track {
+    width: 100%;
+    // max-width: rem(505);
+    margin: 0 auto;
+    height: rem(4);
+    background: $neutral-color2;
+    border-radius: rem(4);
+    display: flex;
+
+    .plyr-slider-thumb {
+        width: 20%;
+        height: 100%;
+        background: $neutral-color1;
+        border-radius: rem(4);
+    }
+}
+
+.song-thumbnail {
+    display: flex;
+    align-items: center;
+
+    .thumbnail-text {
+        display: flex;
+        align-items: center;
+        margin-left: rem(8);
+
+        .text-wrap {
+            margin-right: rem(12);
+        }
+
+        p {
+            margin-bottom: rem(8);
+            font-size: rem(12);
+            line-height: rem(14);
+            color: $secondary-color3;
+            text-transform: capitalize;
+        }
+
+        span {
+            display: block;
+            font-size: rem(10);
+            line-height: rem(12);
+            color: $neutral-color1;
+        }
+    }
+}
+
+.utility-cntrls {
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            margin-right: rem(8);
+
+            @include mobile-lg() {
+                margin: 0 rem(8);
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .plyr-slider-track {
+                width: rem(72);
+            }
+
+            span {
+                font-size: rem(12);
+            }
+
+            &:nth-child(4) {
+                @include mobile-lg() {
+                    display: none;
+                }
+            }
+        }
+    }
+}

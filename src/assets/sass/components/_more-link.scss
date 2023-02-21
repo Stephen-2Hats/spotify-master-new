@@ -1,0 +1,11 @@
+.more-link {
+    color: $secondary-color3;
+    text-transform: uppercase;
+    font-size: rem(10);
+    line-height: rem(12);
+
+
+    &:hover {
+        color: $primary-color;
+    }
+}

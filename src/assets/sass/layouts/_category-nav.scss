@@ -1,0 +1,30 @@
+.category-nav {
+    padding: rem(12) 0;
+    padding-left: rem(8);
+    overflow-y: scroll;
+    height: calc(100vh - rem(177));
+    // border-top: 1px solid $neutral-color1;
+    
+
+    ul {
+        padding: 0 rem(12);
+
+        li {
+            display: block;
+            margin-bottom: rem(8);
+
+            a {
+                font-family: $font-regular;
+                font-size: rem(12);
+                line-height: rem(14);
+                color: $neutral-color1;
+                word-break: break-all;
+
+                &:hover {
+                    color: $secondary-color3;
+                }
+            }
+        }
+    }
+   
+}
